@@ -22,6 +22,7 @@
             <div class="input-wrapper">
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
                 <button class="button-add" onclick="agregarAmigo()">Añadir Amigo</button>
+                
             </div>
            
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
@@ -31,6 +32,11 @@
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
+                </button>
+            </div>
+                <div class="button-container">
+                <button class="button-draw" onclick="nuevoSorteo ()" aria-label="Nuevo Sorteo">
+                    Nuevo Sorteo
                 </button>
             </div>
         </section>

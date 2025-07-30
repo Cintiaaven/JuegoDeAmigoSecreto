@@ -110,7 +110,7 @@ button {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     border: 2px solid #000;
-    border-radius: 25px;
+    border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
@@ -155,8 +155,16 @@ ul {
 
 .button-draw img {
     margin-right: 40px;
+    
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    display: flex;
+    align-items: rigth;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
 }

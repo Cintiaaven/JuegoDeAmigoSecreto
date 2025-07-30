@@ -61,4 +61,23 @@ function sortearAmigo() {
   // También lo mostramos en el HTML (opcional)
   const resultado = document.getElementById("resultado");
   resultado.innerHTML = `<li>${ganador}</li>`;
+    resultado.style.display = "block"; // Asegura que el resultado sea visible
+    resultado.setAttribute("aria-live", "polite"); // Anuncia el cambio para lectores de pantalla
+    input.value = ""; // Limpia el input después de sortear
+    amigos = []; // Limpia el array de amigos después del sorteo
+    actualizarLista(); // Actualiza la lista para reflejar que ya no hay amigos
+    
+}
+function nuevoSorteo() {
+  // Vaciar array de nombres
+  amigos = [];
+
+  // Limpiar lista de amigos en pantalla
+  document.getElementById("listaAmigos").innerHTML = "";
+
+  // Limpiar resultado del sorteo
+  document.getElementById("resultado").innerHTML = "";
+
+  // (Opcional) Limpiar el campo de entrada
+  document.getElementById("amigo").value = "";
 }
