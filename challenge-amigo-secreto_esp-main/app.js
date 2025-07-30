@@ -6,11 +6,22 @@ function agregarAmigo() {
   const input = document.getElementById("amigo");
   const nombre = input.value.trim();
 
+
   // Validación: que no esté vacío ni contenga solo números
   if (nombre === "" || !isNaN(nombre)) {
     alert("Por favor, ingresa un nombre válido (no vacío y sin solo números).");
     return;
   }
+// Validación: evitar duplicados (ignorando mayúsculas/minúsculas)
+  const nombreNormalizado = nombre.toLowerCase();
+  const yaExiste = amigos.some(amigo => amigo.toLowerCase() === nombreNormalizado);
+  if (yaExiste) {
+    alert("Ese nombre ya fue ingresado.");
+
+input.value = "";//limpia el input si el nombre ya existe
+    return;
+  }
+  
 
   // Agrega el nombre al array
   amigos.push(nombre);
